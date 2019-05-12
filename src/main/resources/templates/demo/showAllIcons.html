@@ -1,0 +1,21 @@
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Demo Icons page</title>
+        <link rel="stylesheet" media="screen" href="../../static/css/global.css" th:href="@{/css/global.css}">
+    </head>
+    <body>
+        <h1>Demo Icons page</h1>
+        <h2>Weather</h2>
+        <div th:if="${demoWeatherIcons != null}">
+            <img th:each="icon : ${demoWeatherIcons}"
+                 th:if="${icon != T(be.skylark.weather.darkskyclient.entities.DsIcon).UNKNOWN}"
+                 th:alt="${icon.value}" th:src="@{${'/img/weather-icons/' + icon.value + '.svg'}}"
+                 src="../../static/img/weather-icons/clear-day.svg" alt="clear-day"
+                 class="weather-icon medium"/>
+        </div>
+        <div th:unless="${demoWeatherIcons != null}"><p>No weather icon available !</p></div>
+    </body>
+</html>
+
+
