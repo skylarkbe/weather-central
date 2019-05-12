@@ -13,7 +13,8 @@
 ## Attribution
 
  * [Weather icons](https://www.iconfinder.com/iconsets/weather-color-2?utm_source=sharing-feature&utm_medium=social&utm_campaign=sharing-feature&utm_content=link) by Yun Liu
- *  Weather information is provided by Dark Sky services
+ * [Weather api client](https://github.com/skylarkbe/darksky-client) by skylark.be
+ * Weather information is provided by Dark Sky services
 
 [![Powered by Dark Sky](https://darksky.net/dev/img/attribution/poweredby-oneline.png)](https://darksky.net/poweredby/)
 
