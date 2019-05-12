@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head th:fragment="head">
+        <meta charset="UTF-8">
+        <meta name="description" th:content="#{global.description}" content="Weather central application provides user customized weather forecast experience using the DarkSky API">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../../static/css/bulma.min.css" th:href="@{/css/bulma.min.css}">
+        <link rel="stylesheet" href="../../static/css/all.min.css" th:href="@{/css/all.min.css}">
+        <link rel="stylesheet" href="../../static/css/global.css" th:href="@{/css/global.css}">
+    </head>
+    <body>
+
+        <main class="section">
+            <div class="container is-fluid">
+                <h1>Static body</h1>
+            </div>
+        </main>
+
+        <footer th:fragment="footer" class="footer">
+            <div class="container is-fluid">
+                <div class="columns is-vcentered">
+                    <div class="column is-10">
+                        <p>
+                            <span class="icon">
+                                <i class="fab fa-github"></i>
+                            </span>
+                            <a th:text="#{global.footer.gitHub}" href="https://github.com/skylarkbe/weather-central/">View on github</a>
+                        </p>
+                    </div>
+                    <div class="column">
+                        <a href="https://darksky.net/poweredby/">
+                            <img th:src="@{/img/poweredby.png}" th:alt="#{global.footer.poweredByDarkSky}" src="../../static/img/poweredby.png" alt="Powered by DarkSky" class="image is-small">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

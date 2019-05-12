@@ -1,21 +1,61 @@
+<!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-    <head>
+    <head th:replace="fragments/htmlTemplate :: head">
         <meta charset="UTF-8" />
-        <title th:text="#{view.demoIcons.title}">Demo Icons page</title>
-        <link rel="stylesheet" media="screen" href="../../static/css/global.css" th:href="@{/css/global.css}">
+        <title>Demo static HTML header</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../../static/css/bulma.min.css">
+        <link rel="stylesheet" href="../../static/css/all.min.css">
+        <link rel="stylesheet" href="../../static/css/global.css">
     </head>
     <body>
-        <h1 th:text="#{view.demoIcons.title}">Demo Icons page</h1>
-        <h2 th:text="#{view.demoIcons.weather.title}">Weather</h2>
-        <div th:if="${demoWeatherIcons != null}">
-            <img th:each="icon : ${demoWeatherIcons}"
-                 th:if="${icon != T(be.skylark.weather.darkskyclient.entities.DsIcon).UNKNOWN}"
-                 th:alt="${icon.value}" th:src="@{${'/img/weather-icons/' + icon.value + '.svg'}}"
-                 src="../../static/img/weather-icons/clear-day.svg" alt="clear-day"
-                 class="weather-icon medium"/>
-        </div>
-        <div th:unless="${demoWeatherIcons != null}"><p th:text="#{view.demoIcons.weather.noIcons}">No weather icon available !</p></div>
+        <main class="section">
+            <div class="container is-fluid">
+                <h1 th:text="#{view.demoIcons.title}">Demo Icons page</h1>
+                <div>
+                    <h2 th:text="#{view.demoIcons.weather.title}">Weather</h2>
+                    <div th:if="${demoWeatherIcons != null}">
+                        <img th:each="icon : ${demoWeatherIcons}"
+                             th:if="${icon != T(be.skylark.weather.darkskyclient.entities.DsIcon).UNKNOWN}"
+                             th:alt="${icon.value}" th:src="@{${'/img/weather-icons/' + icon.value + '.svg'}}"
+                             src="../../static/img/weather-icons/clear-day.svg" alt="clear-day"
+                             class="image is-inline-block is-large"/>
+                    </div>
+                    <div th:unless="${demoWeatherIcons != null}"><p th:text="#{view.demoIcons.weather.noIcons}">No weather icon available !</p></div>
+                </div>
+                <div>
+                    <h2 th:text="#{view.demoIcons.fontAwesome.title}">Font Awesome</h2>
+                    <div>
+                        <span><i class="fas fa-bolt"></i></span>
+                        <span><i class="fas fa-cloud"></i></span>
+                        <span><i class="fas fa-cloud-meatball"></i></span>
+                        <span><i class="fas fa-cloud-moon"></i></span>
+                        <span><i class="fas fa-cloud-moon-rain"></i></span>
+                        <span><i class="fas fa-cloud-rain"></i></span>
+                        <span><i class="fas fa-cloud-showers-heavy"></i></span>
+                        <span><i class="fas fa-cloud-sun"></i></span>
+                        <span><i class="fas fa-cloud-sun-rain"></i></span>
+                        <span><i class="fas fa-meteor"></i></span>
+                        <span><i class="far fa-moon"></i></span>
+                        <span><i class="fas fa-moon"></i></span>
+                        <span><i class="fas fa-poo-storm"></i></span>
+                        <span><i class="fas fa-rainbow"></i></span>
+                        <span><i class="fas fa-smog"></i></span>
+                        <span><i class="far fa-snowflake"></i></span>
+                        <span><i class="fas fa-snowflake"></i></i></span>
+                        <span><i class="far fa-sun"></i></i></span>
+                        <span><i class="fas fa-sun"></i></span>
+                        <span><i class="fas fa-temperature-high"></i></span>
+                        <span><i class="fas fa-temperature-low"></i></span>
+                        <span><i class="fas fa-umbrella"></i></span>
+                        <span><i class="fas fa-water"></i></span>
+                        <span><i class="fas fa-wind"></i></i></span>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer th:replace="fragments/htmlTemplate :: footer" class="footer">
+            &copy; 2019 - Static footer value
+        </footer>
     </body>
 </html>
-
-

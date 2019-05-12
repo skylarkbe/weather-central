@@ -1,3 +1,4 @@
-img.weather-icon.small { width: 5em ; }
-img.weather-icon.medium { width: 10em ; }
-img.weather-icon.big { width: 5em ; }
+.footer {padding: 2rem 1.5rem 3rem;}
+.image.is-small {max-height: 3em;}
+.image.is-medium {max-height: 5em;}
+.image.is-large {max-height: 10em;}
