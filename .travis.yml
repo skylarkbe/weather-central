@@ -4,7 +4,9 @@ jdk:
 
 sudo: false
 
-script: mvn install -DdarkSky.api.key=APIKEY -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+install:
+  - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+  - mvn test -DdarkSky.api.key=APIKEY -B
 
 cache:
   directories:
