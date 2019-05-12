@@ -5,16 +5,17 @@
 # pathname.
 
 ## Bulma CSS
-- (^|/)css/bulma\.(css|min\.css)$
+- src/main/resources/static/css/bulma\.css$
+- src/main/resources/static/css/bulma\.min\.css$
 
 # Font Awesome
-- (^|/)css/all\.(css|min\.css)$
-- (^|/)css/brands\.(css|min\.css)$
-- (^|/)css/fontawesome\.(css|min\.css)$
-- (^|/)css/regular\.(css|min\.css)$
-- (^|/)css/solid\.(css|min\.css)$
-- (^|/)css/svg-with-js\.(css|min\.css)$
-- (^|/)css/v4-shims\.(css|min\.css)$
-- (^|/)fa-brands-400\.(eot|svg|ttf|woff|woff2)$
-- (^|/)fa-regular-400\.(eot|svg|ttf|woff|woff2)$
-- (^|/)fa-solid-400\.(eot|svg|ttf|woff|woff2)$
+- src/main/resources/static/css/all\.(css|min\.css)$
+- src/main/resources/static/css/brands\.(css|min\.css)$
+- src/main/resources/static/css/fontawesome\.(css|min\.css)$
+- src/main/resources/static/css/regular\.(css|min\.css)$
+- src/main/resources/static/css/solid\.(css|min\.css)$
+- src/main/resources/static/css/svg-with-js\.(css|min\.css)$
+- src/main/resources/static/css/v4-shims\.(css|min\.css)$
+- src/main/resources/static/webfonts/fa-brands-400\.(eot|svg|ttf|woff|woff2)$
+- src/main/resources/static/webfonts/fa-regular-400\.(eot|svg|ttf|woff|woff2)$
+- src/main/resources/static/webfonts/fa-solid-400\.(eot|svg|ttf|woff|woff2)$
