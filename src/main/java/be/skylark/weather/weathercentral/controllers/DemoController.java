@@ -14,7 +14,7 @@ public class DemoController {
     @RequestMapping(method = RequestMethod.GET, value = Paths.Demo.showAllIcons)
     public String showAllIcons(final Model model) {
         model.addAttribute( WEATHER_ICONS , DsIcon.values() ) ;
-        return Paths.Demo.showAllIcons ;
+        return Views.Demo.showAllIcons ;
     }
 
 }

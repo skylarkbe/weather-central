@@ -1,12 +1,12 @@
 <html xmlns:th="http://www.thymeleaf.org">
     <head>
         <meta charset="UTF-8" />
-        <title>Demo Icons page</title>
+        <title th:text="#{view.demoIcons.title}">Demo Icons page</title>
         <link rel="stylesheet" media="screen" href="../../static/css/global.css" th:href="@{/css/global.css}">
     </head>
     <body>
-        <h1>Demo Icons page</h1>
-        <h2>Weather</h2>
+        <h1 th:text="#{view.demoIcons.title}">Demo Icons page</h1>
+        <h2 th:text="#{view.demoIcons.weather.title}">Weather</h2>
         <div th:if="${demoWeatherIcons != null}">
             <img th:each="icon : ${demoWeatherIcons}"
                  th:if="${icon != T(be.skylark.weather.darkskyclient.entities.DsIcon).UNKNOWN}"
@@ -14,7 +14,7 @@
                  src="../../static/img/weather-icons/clear-day.svg" alt="clear-day"
                  class="weather-icon medium"/>
         </div>
-        <div th:unless="${demoWeatherIcons != null}"><p>No weather icon available !</p></div>
+        <div th:unless="${demoWeatherIcons != null}"><p th:text="#{view.demoIcons.weather.noIcons}">No weather icon available !</p></div>
     </body>
 </html>
 
