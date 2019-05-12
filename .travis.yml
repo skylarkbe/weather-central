@@ -2,6 +2,10 @@ language: java
 jdk:
   - oraclejdk8
 
+sudo: false
+
+script: mvn install -DdarkSky.api.key=APIKEY -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+
 cache:
   directories:
     - ~/.m2/repository
