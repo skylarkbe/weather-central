@@ -1,0 +1,10 @@
+src/main/resources/static/css/all* linguist-vendored
+src/main/resources/static/css/brands* linguist-vendored
+src/main/resources/static/css/fontawesome* linguist-vendored
+src/main/resources/static/css/regular* linguist-vendored
+src/main/resources/static/css/solid* linguist-vendored
+src/main/resources/static/css/svg-with-js* linguist-vendored
+src/main/resources/static/css/v4-shims* linguist-vendored
+src/main/resources/static/css/bulma* linguist-vendored
+src/main/resources/static/webfonts/* linguist-vendored
+
