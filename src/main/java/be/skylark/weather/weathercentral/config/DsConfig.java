@@ -37,19 +37,16 @@ public class DsConfig {
      */
     @Bean
     public DarkSkyClient darkSkyClient() {
-
-        if ( StringUtils.isAnyBlank(dsApiKey, dsApiURL, dsApiForecastPath, dsApiTimeMachinePath) ) {
-            throw new IllegalArgumentException("DarkSky API is not properly configured ; make sure to provide the necessary arguments");
-        }
-
-        logger.debug("Generating DarkSky client with API {} ; forecast path {} and time machine path {}", dsApiURL, dsApiForecastPath, dsApiTimeMachinePath);
-
         DarkSkyClient dsClient = new DarkSkyClient() ;
+        if ( StringUtils.isAnyBlank(dsApiKey, dsApiURL, dsApiForecastPath, dsApiTimeMachinePath) ) {
+            logger.error("DarkSky API is not properly configured ; make sure to provide the necessary arguments");
+            return dsClient ;
+        }
+        logger.debug("Generating DarkSky client with API {} ; forecast path {} and time machine path {}", dsApiURL, dsApiForecastPath, dsApiTimeMachinePath);
         dsClient.setApiKey( dsApiKey );
         dsClient.setBaseApiUrl( dsApiURL );
         dsClient.setForecastPath( dsApiForecastPath );
         dsClient.setTimeMachinePath( dsApiTimeMachinePath );
-
         return dsClient ;
     }
 
