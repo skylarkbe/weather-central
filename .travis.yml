@@ -1,11 +1,8 @@
 language: java
 jdk:
-  - oraclejdk8
+  - openjdk11
 
 sudo: false
-
-install: mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
-script: mvn test -DdarkSky.api.key=APIKEY -B
 
 cache:
   directories:
