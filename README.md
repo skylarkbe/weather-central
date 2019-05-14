@@ -13,6 +13,7 @@
 ## Attribution
 
  * [Bulma CSS Framework](https://bulma.io/) with [Font Awesome](https://fontawesome.com/)
+ * [Logo](https://thenounproject.com/Maludk) by Maludk
  * [Weather icons](https://www.iconfinder.com/iconsets/weather-color-2?utm_source=sharing-feature&utm_medium=social&utm_campaign=sharing-feature&utm_content=link) by Yun Liu
  * [Weather api client](https://github.com/skylarkbe/darksky-client) by skylark.be
  * Weather information is provided by Dark Sky services

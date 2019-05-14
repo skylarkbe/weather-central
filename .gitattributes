@@ -7,4 +7,4 @@ src/main/resources/static/css/svg-with-js* linguist-vendored
 src/main/resources/static/css/v4-shims* linguist-vendored
 src/main/resources/static/css/bulma* linguist-vendored
 src/main/resources/static/webfonts/* linguist-vendored
-
+src/main/resources/static/js/jquery* linguist-vendored

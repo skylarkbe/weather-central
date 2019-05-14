@@ -75,6 +75,11 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
+        <!-- Thymeleaf integration for Spring Security-->
+        <dependency>
+            <groupId>org.thymeleaf.extras</groupId>
+            <artifactId>thymeleaf-extras-springsecurity5</artifactId>
+        </dependency>
         <!-- DarkSky Client API -->
         <dependency>
             <groupId>be.skylark.weather</groupId>

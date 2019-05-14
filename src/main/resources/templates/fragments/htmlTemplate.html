@@ -1,14 +1,49 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
-    <head th:fragment="head">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+    <head th:fragment="head" th:with="title=${title} ?: #{global.title}" >
         <meta charset="UTF-8">
         <meta name="description" th:content="#{global.description}" content="Weather central application provides user customized weather forecast experience using the DarkSky API">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title th:text="${title}">Static title</title>
+        <script type="text/javascript" src="../../static/js/jquery-3.4.1.min.js" th:src="@{/js/jquery-3.4.1.min.js}"></script>
+        <script type="text/javascript" src="../../static/js/navbar.js" th:src="@{/js/navbar.js}"></script>
         <link rel="stylesheet" href="../../static/css/bulma.min.css" th:href="@{/css/bulma.min.css}">
         <link rel="stylesheet" href="../../static/css/all.min.css" th:href="@{/css/all.min.css}">
         <link rel="stylesheet" href="../../static/css/global.css" th:href="@{/css/global.css}">
     </head>
     <body>
+
+        <nav class="navbar has-shadow is-spaced" role="navigation" aria-label="main navigation" th:fragment="navigation">
+            <div class="container is-fluid">
+                <div class="navbar-brand">
+                    <a class="navbar-item" href="#" th:href="@{/}">
+                        <img src="../../static/img/logo.svg" alt="Static logo" th:src="@{/img/logo.svg}" th:alt="#{global.description}" width="35">
+                        <span th:text="#{global.title}" class="has-text-weight-bold">Weather central</span>
+                    </a>
+                    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                    </a>
+                </div>
+                <div class="navbar-menu">
+                    <a class="navbar-item" sec:authorize="isAnonymous()"><span class="icon"><i class="fas fa-sign-in-alt"></i></span><span th:text="#{global.navbar.login}">Login</span></a>
+                    <a class="navbar-item" sec:authorize="isAuthenticated()"><span class="icon"><i class="fas fa-sign-out-alt"></i></span><span th:text="#{global.navbar.logout}">Logout</span></a>
+                </div>
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <div class="field has-addons">
+                            <div class="control is-expanded">
+                                <input class="input" type="text" placeholder="Search location" th:placeholder="#{global.navbar.search.placeholder}">
+                            </div>
+                            <p class="control">
+                                <button class="button is-info"><i class="fas fa-search-location"></i></button>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
 
         <main class="section">
             <div class="container is-fluid">
@@ -29,7 +64,7 @@
                     </div>
                     <div class="column">
                         <a href="https://darksky.net/poweredby/">
-                            <img th:src="@{/img/poweredby.png}" th:alt="#{global.footer.poweredByDarkSky}" src="../../static/img/poweredby.png" alt="Powered by DarkSky" class="image is-small">
+                            <img th:src="@{/img/poweredby.svg}" th:alt="#{global.footer.poweredByDarkSky}" src="../../static/img/poweredby.svg" alt="Powered by DarkSky" class="image is-small">
                         </a>
                     </div>
                 </div>

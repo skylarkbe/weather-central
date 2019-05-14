@@ -1,4 +1,6 @@
+.navbar-item img { max-height: 3rem; }
 .footer {padding: 2rem 1.5rem 3rem;}
+
 .image.is-small {max-height: 3em;}
 .image.is-medium {max-height: 5em;}
 .image.is-large {max-height: 10em;}
